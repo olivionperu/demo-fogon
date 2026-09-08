@@ -54,11 +54,20 @@ a { color: inherit; }
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-family: var(--font-heading);
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
   color: var(--color-primary);
   text-decoration: none;
+}
+
+.logo img {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
 }
 
 .nav-links {
@@ -293,7 +302,13 @@ section { padding: 72px 0; }
   border-radius: var(--radius);
   padding: 22px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-  border-top: 5px solid var(--color-accent);
+  overflow: hidden;
+}
+.combo-card img {
+  width: calc(100% + 44px);
+  height: 150px;
+  object-fit: cover;
+  margin: -22px -22px 16px -22px;
 }
 .combo-card h4 { font-family: var(--font-heading); margin: 0 0 8px; color: var(--color-primary); }
 .combo-card .price { font-size: 1.5rem; font-weight: 800; color: var(--color-primary-dark); }
