@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var name = form.querySelector('#name').value.trim();
-      var whatsappMsg = 'Hola El Fogón, soy ' + name + '. ' + form.querySelector('#message').value.trim();
-      window.open('https://wa.me/51999999999?text=' + encodeURIComponent(whatsappMsg), '_blank');
+      var whatsappMsg = 'Hola Fogón Campero, soy ' + name + '. ' + form.querySelector('#message').value.trim();
+      window.open('https://wa.me/51915015443?text=' + encodeURIComponent(whatsappMsg), '_blank');
     });
   }
 });

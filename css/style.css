@@ -1,13 +1,15 @@
 :root {
-  --color-primary: #b3401e;
-  --color-primary-dark: #8a2f15;
-  --color-dark: #1f1a17;
-  --color-cream: #fdf6ee;
-  --color-text: #2b2622;
-  --color-muted: #6f655c;
+  --color-primary: #E4172A;
+  --color-primary-dark: #B01120;
+  --color-accent: #FFC72C;
+  --color-accent-dark: #E8AC00;
+  --color-dark: #2B1B0E;
+  --color-cream: #FFF8E6;
+  --color-text: #2b2013;
+  --color-muted: #75634a;
   --radius: 10px;
   --max-width: 1140px;
-  --font-heading: Georgia, 'Times New Roman', serif;
+  --font-heading: 'Arial Black', Arial, sans-serif;
   --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
 }
 
@@ -115,10 +117,11 @@ a { color: inherit; }
 
 /* Hero */
 .hero {
-  background: linear-gradient(rgba(20,14,10,.55), rgba(20,14,10,.55)), url('https://picsum.photos/id/292/1600/900') center/cover no-repeat;
+  background: radial-gradient(circle at 30% 20%, #4a2410, var(--color-dark) 60%);
   color: #fff;
   padding: 110px 20px;
   text-align: center;
+  border-bottom: 6px solid var(--color-accent);
 }
 
 .hero h1 {
@@ -160,6 +163,12 @@ a { color: inherit; }
   border: 2px solid #fff;
   color: #fff;
 }
+
+.btn-accent {
+  background: var(--color-accent);
+  color: var(--color-dark);
+}
+.btn-accent:hover { background: var(--color-accent-dark); }
 
 .hero-actions {
   display: flex;
@@ -227,7 +236,7 @@ section { padding: 72px 0; }
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: rgba(179,64,30,.1);
+  background: rgba(228,23,42,.1);
   color: var(--color-primary);
   display: flex;
   align-items: center;
@@ -245,7 +254,50 @@ section { padding: 72px 0; }
 .cta-band h2 { font-family: var(--font-heading); font-size: 1.8rem; margin: 0 0 10px; }
 .cta-band p { color: #cfc6bd; margin: 0 0 26px; }
 
-.alt-bg { background: #f4ebe0; }
+.alt-bg { background: #FFEFC2; }
+
+/* Promo banner */
+.promo-banner {
+  background: var(--color-accent);
+  color: var(--color-dark);
+  text-align: center;
+  padding: 12px 20px;
+  font-weight: 700;
+  font-size: .95rem;
+}
+.promo-banner strong { color: var(--color-primary); }
+
+/* Menu / Carta */
+.menu-category { margin-bottom: 44px; }
+.menu-category h3 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  border-bottom: 3px solid var(--color-accent);
+  padding-bottom: 8px;
+  margin-bottom: 18px;
+  font-size: 1.3rem;
+}
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px dashed rgba(0,0,0,.12);
+}
+.menu-item .name { font-weight: 600; }
+.menu-item .desc { display: block; color: var(--color-muted); font-size: .85rem; font-weight: 400; margin-top: 2px; }
+.menu-item .price { font-weight: 700; color: var(--color-primary-dark); white-space: nowrap; }
+
+.combo-card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 22px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  border-top: 5px solid var(--color-accent);
+}
+.combo-card h4 { font-family: var(--font-heading); margin: 0 0 8px; color: var(--color-primary); }
+.combo-card .price { font-size: 1.5rem; font-weight: 800; color: var(--color-primary-dark); }
+.combo-card p { color: var(--color-muted); font-size: .9rem; margin: 6px 0 0; }
 
 .two-col {
   display: grid;
@@ -308,7 +360,7 @@ section { padding: 72px 0; }
 .contact-info-item .icon {
   width: 44px; height: 44px; flex-shrink: 0;
   border-radius: 50%;
-  background: rgba(179,64,30,.1);
+  background: rgba(228,23,42,.1);
   color: var(--color-primary);
   display: flex; align-items: center; justify-content: center;
   font-size: 1.2rem;
